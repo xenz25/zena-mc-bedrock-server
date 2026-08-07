@@ -4,8 +4,8 @@ services:
       context: ../iztg-bedrock-server
       dockerfile: Dockerfile
     ports:
-      - "${SERVER_PORT:-19132}:19132/udp"
-      - "${SERVER_PORT_V6:-19133}:19133/udp"
+      - "${HOST_PORT:-19132}:19132/udp"
+      - "${HOST_PORT_V6:-19133}:19133/udp"
     environment:
       EULA: "TRUE"
       VERSION: "${VERSION:-latest}"
@@ -18,8 +18,8 @@ services:
       ONLINE_MODE: "${ONLINE_MODE:-true}"
       ALLOW_LIST: "${ALLOW_LIST:-false}"
       ENABLE_BDS_V6BIND_FIX: "${ENABLE_BDS_V6BIND_FIX:-false}"
-      SERVER_PORT: "${SERVER_PORT:-19132}"
-      SERVER_PORT_V6: "${SERVER_PORT_V6:-19133}"
+      SERVER_PORT: "19132" # do not override
+      SERVER_PORT_V6: "19133" # do not override
       ENABLE_LAN_VISIBILITY: "${ENABLE_LAN_VISIBILITY:-true}"
       VIEW_DISTANCE: "${VIEW_DISTANCE:-32}"
       TICK_DISTANCE: "${TICK_DISTANCE:-4}"
