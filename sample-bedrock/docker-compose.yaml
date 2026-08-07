@@ -1,6 +1,5 @@
 services:
   server:
-    container_name: bedrock-server
     build: # build from local Dockerfile
       context: ../iztg-bedrock-server
       dockerfile: Dockerfile
