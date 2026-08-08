@@ -80,9 +80,8 @@ services:
       #   player1:1234567890
       #   player2:0987654321
 
-      # OPS: |
-      #   1234567890
-      #   player1
+      OPS: |
+        2535457026668085
       # MEMBERS: |
       #   player2
       # VISITORS: |
